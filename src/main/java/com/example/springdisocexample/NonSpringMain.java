@@ -13,6 +13,8 @@ public class NonSpringMain {
 
         PersonService personService = new PersonService(personRepo);
 
+        // here we run into a problem in that we can't actually run the rest api without building something
+        // simliar to spring boot
         PersonRest personRest = new PersonRest(personService);
 
     }

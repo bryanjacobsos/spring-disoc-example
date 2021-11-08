@@ -10,6 +10,11 @@ public class Person {
 
     private Integer age;
 
+    // this is necessary for spring boot to create this object
+    // try deleting it then run the PersonRestIT test and see what happens
+    public Person() {
+
+    }
     private Person(Integer id, String firstName, String lastName, Integer age) {
         this.id = id;
         this.firstName = firstName;
