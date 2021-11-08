@@ -23,7 +23,15 @@ public class PersonRest {
 
     private PersonService personService;
 
-    @Autowired // this will cause the spring framework to inject the PersonService
+    /**
+     * The @Autowired annotation allows you to inject a dependency into the constructor. This means that
+     * spring will create and pass the object into the constructor for you.
+     *
+     * Additionally, it's possible to put the @Autowired on the PersonService class variable and then the constructor
+     * can be removed.
+     * @param personService
+     */
+    @Autowired
     public PersonRest(PersonService personService) {
         this.personService = personService;
     }
