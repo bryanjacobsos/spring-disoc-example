@@ -34,6 +34,7 @@ public class PersonRestIT {
 
         String testUrl = "http://localhost:" + port + "/person/1";
 
+        // The resttemplate is a nice wrapper around http and (de)serializing objects
         ResponseEntity<Person> responseEntity = restTemplate.getForEntity(testUrl, Person.class);
 
         Person bob = responseEntity.getBody();
